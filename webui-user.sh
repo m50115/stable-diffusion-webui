@@ -10,10 +10,14 @@
 #clone_dir="stable-diffusion-webui"
 
 # Commandline arguments for webui.py, for example: export COMMANDLINE_ARGS="--medvram --opt-split-attention"
-#export COMMANDLINE_ARGS=""
+# Configuracion para Mac Intel sin GPU NVIDIA (CPU only)
+export COMMANDLINE_ARGS="--skip-torch-cuda-test --no-half --use-cpu all --precision full"
+
+# Mirror del repo de Stability-AI (original fue eliminado de GitHub)
+export STABLE_DIFFUSION_REPO="https://github.com/w-e-w/stablediffusion.git"
 
 # python3 executable
-#python_cmd="python3"
+python_cmd="python3.11"
 
 # git executable
 #export GIT="git"
@@ -43,6 +47,6 @@
 #export ACCELERATE="True"
 
 # Uncomment to disable TCMalloc
-#export NO_TCMALLOC="True"
+export NO_TCMALLOC="True"
 
 ###########################################
